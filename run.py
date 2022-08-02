@@ -63,7 +63,7 @@ U='\033[1;35m' #UNGU
 O='\033[38;2;255;127;0;1m' #ORANGE
 C='\033[0m' #CLEAR
 N = '\x1b[0m' # WARNA MATI
-USN="Mozilla/5.0 (Linux; Android 7.1.1; SM-J510H Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 41.0.0.13.92 Android (25/7.1.1; 320dpi; 720x1280; samsung; SM-J510H; j5x3g; qcom; ru_RU; 103516660)"
+USN="Mozilla/5.0 (Linux; Android 5.0.2; Redmi Note 2 Build/LRX22G; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.106 Mobile Safari/537.36 Instagram 41.0.0.13.92 Android (21/5.0.2; 480dpi; 1080x1920; Xiaomi; Redmi Note 2; hermes; mt6795; uk_UA; 103516666)"
 # USN="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 ugen=open('ua.txt','r').read().splitlines()
 internal,external,success,checkpoint,loop,following,lisensikuni,lisensiku=[],[],[],[],0,[],[],['sukses']
@@ -517,7 +517,7 @@ class instagram:
             crf_token=re.findall(r"\"csrf_token\"\:\"(.*?)\"", str(token))[0]
             s.headers.update({
                 'authority': 'www.instagram.com',
-                'x-ig-www-claim': 'hmac.AR0_hFExdjOFLGYgHq5s2QFKLf0RXUCLge7j-A68z_JLsX49',
+                'x-ig-www-claim': 'hmac.AR2r6pPro8jlPDMsA0gzd8rwdra1OfG65OCYTIHs7cCLkzw0',
                 'x-instagram-ajax': '82a581bb9399',
                 'content-type': 'application/x-www-form-urlencoded',
                 'accept': '*/*',
@@ -773,3 +773,4 @@ if __name__=='__main__':
         lisensi()
     except requests.exceptions.ConnectionError:
         exit(f'\n [{M}!{C}] Koneksi internet bermasalah')
+
